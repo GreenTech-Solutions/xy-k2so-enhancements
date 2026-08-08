@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.5
+Date: 08-08-2026
+  Changes:
+    - Update compatibility code with Outer Rim/Frozeta: Nuclear Winter.
+    - Tighten up prerequisite code to help improve compatibility.
+---------------------------------------------------------------------------------------------------
 Version: 0.8.4
 Date: 08-05-2026
   Changes:
