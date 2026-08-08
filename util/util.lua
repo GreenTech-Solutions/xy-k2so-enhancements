@@ -2,11 +2,48 @@ local utils = {}
 
 local t = data.raw.technology
 
+--- Returns the first (arbitrary) key for a given value.
+--- @param tbl table The table to search.
+--- @param value any The value to search for.
+--- @return any key key associated with the given value.
+local function table_find(tbl, value)
+	for i, v in pairs(tbl) do
+		if (v == value) then
+			return i
+		end
+	end
+end
+utils.table_find = table_find
+
+--- Determines if a table contains a given value.
+--- @param tbl table The table to search.
+--- @param value any The value to search for.
+--- @return boolean contained Set if the value is contained in the given table.
+local function table_contains(tbl, value)
+	return table_find(tbl, value) ~= nil
+end
+utils.table_contains = table_contains
+
+--- Inserts a value into a table, if it doesn't already exist as a value.
+--- @param tbl table
+--- @param value any
+local function insert_unique(tbl, value)
+	if (table_contains(tbl, value)) then
+		return false
+	end
+	table.insert(tbl, value)
+	return true
+end
+utils.insert_unique = insert_unique
+
 local function add_preqs(tech, preqs)
-    if t[tech] then
-        for _,v in pairs(preqs) do
-            table.insert(t[tech].prerequisites, v)
-        end
+    local prototype = t[tech]
+    if prototype == nil then
+        return
+    end
+
+    for _, prereq in ipairs(preqs) do
+        insert_unique(prototype.prerequisites, prereq)
     end
 end
 utils.tech_add_preqs = add_preqs
