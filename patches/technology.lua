@@ -48,7 +48,7 @@ if settings.startup['xy-secretas-tech-card'].value and mods['secretas'] then
         'spaceship-scrap-recycling-productivity',
         'transport-belt-capacity-3-Secretas',
     }
-    if mods['outer-rim'] then goto outer_rim_skip end
+    if mods['frozeta-nuclear-winter'] then goto nuclear_winter_skip end
     if settings.startup['condense-level-4-modules-into-one-technology'].value then
         table.insert(requires_auric, 'module-finale')
     else
@@ -63,9 +63,8 @@ if settings.startup['xy-secretas-tech-card'].value and mods['secretas'] then
     end
 
     remove_preqs('golden-science-pack', {'planet-discovery-secretas'})
-    add_preqs('golden-science-pack', {'steam-recycler'})
 
-    ::outer_rim_skip::
+    ::nuclear_winter_skip::
     --- Other secretas patches
     --- Logical progression
     
