@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.6
+Date: 09-28-2026
+  Changes:
+    - Added support for Maraxsis Classic.
+    - Fixed issue with crafting the Singularity Lab using the latest version of K2SO.
+---------------------------------------------------------------------------------------------------
 Version: 0.8.5
 Date: 08-08-2026
   Changes:
