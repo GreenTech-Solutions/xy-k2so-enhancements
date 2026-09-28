@@ -53,7 +53,7 @@ if settings.startup['xy-adv-chem-plant-rebalance'].value and mods['Paracelsin'] 
     }
 end
 
-if settings.startup['xy-hydro-plant-runs-fuel-ref-recipes'].value and mods['maraxsis'] then
+if settings.startup['xy-hydro-plant-runs-fuel-ref-recipes'].value and (mods['maraxsis'] or mods['maraxsis-classic']) then
     table.insert(data.raw['assembling-machine']['maraxsis-hydro-plant'].crafting_categories, 'kr-fuel-refinery')
 end
 

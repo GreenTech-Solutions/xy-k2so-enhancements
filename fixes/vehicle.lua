@@ -1,5 +1,5 @@
 -- Patches vehicles from unpatched mods to use the correct K2 equipment grids
-if mods['maraxsis'] then
+if mods['maraxsis'] or mods['maraxsis-classic'] then
     data.raw['equipment-grid']['maraxsis-diesel-submarine-equipment-grid'].equipment_categories = { "kr-vehicle", "kr-vehicle-motor", "kr-vehicle-roboport" }
     data.raw['equipment-grid']['maraxsis-nuclear-submarine-equipment-grid'].equipment_categories = { "kr-vehicle", "kr-vehicle-motor", "kr-vehicle-roboport" }
 end

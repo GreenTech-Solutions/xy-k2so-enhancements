@@ -6,7 +6,7 @@ if mods['Moshine'] and settings.startup['xy-moshine-connection-length'].value th
     -- Increase the Vulcanus > Moshine distance to something more reasonable, but shorter than average
     data.raw['space-connection']['vulcanus-moshine'].length = 10000
 
-    if mods['maraxsis'] and settings.startup['xy-maraxsis-moshine-connection'].value then
+    if (mods['maraxsis'] or mods['maraxsis-classic']) and settings.startup['xy-maraxsis-moshine-connection'].value then
         data:extend{{
             type = 'space-connection',
             name = 'moshine-maraxsis',
