@@ -99,17 +99,6 @@ end
 
 if settings.startup['xy-lab-recipe-changes'].value then
     data.raw['item']['biolab'].weight = 200 * kg
-    local sing_lab_recipe = data.raw.recipe['kr-singularity-lab']
-    if mods['planet-muluna'] then
-        for _,v in pairs(sing_lab_recipe.ingredients) do
-            if v.name == 'biolab' then
-                v.name = 'cryolab'
-                v.amount = 2
-            end
-        end
-    else
-        add_ingredient_if_missing('kr-singularity-lab', 'item', 'quantum-processor', 50)
-    end
 
     if mods['Paracelsin'] and mods['planet-muluna'] then
         data.raw.recipe['cryolab'].ingredients = {
